@@ -1,0 +1,100 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    overflow-x: hidden; /* Assicura che l'animazione non causi scrollbar orizzontali */
+    padding-top: 50px; /* Spazio per l'header fisso */
+}
+
+body {
+    background: linear-gradient(120deg, #0a0a0a, #0f0f0f);
+    color: #fff;
+    position: relative;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* Header fisso e trasparente */
+header {
+    position: fixed; /* Mantiene l'header in posizione fissa */
+    top: 0; /* Allinea l'header in cima alla pagina */
+    width: 100%; /* Assicura che l'header si estenda per tutta la larghezza della pagina */
+    background: rgba(0, 0, 0, 0.5); /* Nero con un'opacità al 50% */
+    color: white; /* Testo bianco */
+    padding: 10px 20px; /* Spaziatura interna */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sfumatura per distinguerlo dal contenuto sottostante */
+    z-index: 1000; /* Assicura che l'header sia sopra gli altri elementi della pagina */
+    font-size: 20px; /* Dimensione del testo */
+    font-weight: bold; /* Grassetto */
+    text-align: left; /* Allineamento del testo a sinistra */
+}
+
+/* Aggiungiamo un div per l'animazione dello sfondo */
+.background-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('china-landscape.jpg'); /* Sostituisci con il percorso della tua immagine */
+    background-size: cover;
+    animation: moveBackground 30s linear infinite;
+}
+
+@keyframes moveBackground {
+    0% { transform: scale(1) translateX(0); }
+    50% { transform: scale(1.1) translateX(-10%); }
+    100% { transform: scale(1) translateX(0); }
+}
+
+section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative; /* Importante per garantire che il contenuto sia sopra lo sfondo */
+    z-index: 1;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    z-index: 1;
+}
+
+.btn {
+    background-color: #de2910; /* Rosso */
+    color: #ffde00; /* Oro */
+    padding: 10px 20px;
+    margin: 5px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: #ffde00; /* Oro */
+    color: #de2910; /* Rosso */
+    transform: translateY(-5px); /* Effetto di sollevamento */
+}
+
+.buttons {
+    text-align: center; /* Centra i bottoni nella sezione */
+    padding: 20px;
+}
+.intro-gif {
+    max-width: 100%; /* Imposta una larghezza massima per essere responsive */
+    height: auto; /* Mantiene l'aspetto proporzionale dell'immagine */
+    display: block; /* Assicura che l'immagine non abbia spazi extra attorno */
+    margin: 20px auto; /* Centra l'immagine e aggiunge spazio sopra e sotto */
+}
+

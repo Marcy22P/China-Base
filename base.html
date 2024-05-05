@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$CHINA BASE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <header>
+            $CHINA COMMUNITY TAKE OVER
+        </header>
+    
+        <div class="background-animation">
+            <canvas id="canvas"></canvas>
+        </div>
+    
+    <!-- Aggiungi qui il canvas per le animazioni -->
+    <div class="background-animation">
+        <canvas id="canvas"></canvas>
+    </div>
+
+    <section id="introduction">
+        <h1>Welcome</h1>
+        <p>March forward, share welfare together, achieve sustainable development!.</p>
+        <img src="https://static.wixstatic.com/media/298fd7_fe60e56f2f0d4e36a98791d7df9c4143~mv2.gif" alt="Animated Chinese Graphic" class="intro-gif">
+        <div class="buttons">
+            <a href="https://app.uniswap.org/swap?outputCurrency=0xCaa6D4049E667ffd88457A1733d255eed02996Bb&chain=base" class="btn" target="_blank">Buy the Token</a>
+            <a href="https://dexscreener.com/base/0x1a9eac4aed039489c0f7cb837247921079510fa9" class="btn" target="_blank">View the Chart</a>
+            <a href="https://t.me/CHINABASED" class="btn" target="_blank">Join the Telegram Channel</a>
+        </div>
+    </section>
+    
+    
+    <body>
+        <canvas id="canvas"></canvas>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const canvas = document.getElementById('canvas');
+                const ctx = canvas.getContext('2d');
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+    
+                let gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+                gradient.addColorStop(0, 'red');
+                gradient.addColorStop(1, 'yellow');
+    
+                let angle = 0;
+    
+                function draw() {
+                    angle += 0.01;
+                    const sin = Math.sin(angle) * 2;
+                    const cos = Math.cos(angle) * 2;
+    
+                    ctx.clearRect(0, 0, canvas.width, canvas.height);
+                    
+                    ctx.fillStyle = gradient;
+                    ctx.fillRect(sin, cos, canvas.width, canvas.height);
+                    
+                    // Updating the gradient transition for dynamic movement
+                    gradient = ctx.createLinearGradient(0, sin * 100, canvas.width, cos * 100 + canvas.height);
+                    gradient.addColorStop(0, 'red');
+                    gradient.addColorStop(1, 'yellow');
+    
+                    requestAnimationFrame(draw);
+                }
+    
+                draw();
+                
+                window.addEventListener('resize', () => {
+                    canvas.width = window.innerWidth;
+                    canvas.height = window.innerHeight;
+                });
+            });
+        </script>
+    </body>
+    </html>
