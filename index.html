@@ -39,15 +39,33 @@
             color: white;
             padding: 10px 20px;
             z-index: 1000;
+            text-align: center; /* Center the text inside the header */
         }
 
         section {
             margin-top: 50px; /* Adjust as per header height */
             text-align: center;
             z-index: 1;
+            position: relative;
+        }
+
+        /* CSS for text animation */
+        @keyframes textFadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animated-text {
+            animation: textFadeInUp 1.5s ease-out forwards;
         }
     </style>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
+    <script src="script.js"></script>
 </head>
 <body>
     <div class="background-animation">
@@ -55,21 +73,17 @@
     </div>
     <header>
         <div class="container">
-            <div class="txt1">Welcome</div>
-            <div class="txt2">March forward, share welfare together, achieve sustainable development!</div>
-            <div class="bar"></div>
+            <div class="txt1">$CHINA ON BASE COMMUNITY TAKE OVER</div>
         </div>
     </header>
 
     <section id="introduction">
-        <p>March forward, share welfare together, achieve sustainable development!</p>
+        <p class="animated-text">March forward, share welfare together, achieve sustainable development!</p>
         <div class="buttons">
             <a href="https://app.uniswap.org/swap?outputCurrency=0xCaa6D4049E667ffd88457A1733d255eed02996Bb&chain=base" class="btn" target="_blank">Buy the Token</a>
             <a href="https://dexscreener.com/base/0x1a9eac4aed039489c0f7cb837247921079510fa9" class="btn" target="_blank">View the Chart</a>
             <a href="https://t.me/CHINABASED" class="btn" target="_blank">Join the Telegram Channel</a>
         </div>
     </section>
-
-    <script src="script.js"></script>
 </body>
 </html>
