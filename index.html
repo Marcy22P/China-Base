@@ -22,7 +22,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            z-index: -1;
+            z-index: -1; /* Ensure it stays behind other content */
         }
 
         canvas {
@@ -49,7 +49,6 @@
             position: relative;
         }
 
-        /* CSS for text animation */
         @keyframes textFadeInUp {
             from {
                 opacity: 0;
@@ -65,7 +64,6 @@
             animation: textFadeInUp 1.5s ease-out forwards;
         }
     </style>
-    <script src="script.js"></script>
 </head>
 <body>
     <div class="background-animation">
@@ -85,5 +83,7 @@
             <a href="https://t.me/CHINABASED" class="btn" target="_blank">Join the Telegram Channel</a>
         </div>
     </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
