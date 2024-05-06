@@ -6,35 +6,53 @@
     <title>$CHINA BASE</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        body {
+        body, html {
             margin: 0;
             padding: 0;
             overflow: hidden;
             font-family: Arial, sans-serif;
-            background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%);
-            background-size: cover;
-            background-attachment: fixed;
-            animation: zoom 50s linear infinite alternate, moveX 30s linear infinite alternate, moveY 20s linear infinite alternate;
+            background: linear-gradient(120deg, #0a0a0a, #0f0f0f);
+            height: 100%;
+            position: relative;
         }
 
-        @keyframes zoom {
-            from { transform: scale(1); }
-            to { transform: scale(1.1); }
+        .background-animation {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
         }
 
-        @keyframes moveX {
-            from { background-position: 0 0; }
-            to { background-position: 100% 0; }
+        canvas {
+            display: block;
+            width: 100%;
+            height: 100%;
         }
 
-        @keyframes moveY {
-            from { background-position: 0 0; }
-            to { background-position: 0 100%; }
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px 20px;
+            z-index: 1000;
+        }
+
+        section {
+            margin-top: 50px; /* Adjust as per header height */
+            text-align: center;
+            z-index: 1;
         }
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
 </head>
 <body>
+    <div class="background-animation">
+        <canvas id="canvas"></canvas>
+    </div>
     <header>
         <div class="container">
             <div class="txt1">Welcome</div>
@@ -42,10 +60,6 @@
             <div class="bar"></div>
         </div>
     </header>
-
-    <div class="background-animation">
-        <canvas id="canvas"></canvas>
-    </div>
 
     <section id="introduction">
         <p>March forward, share welfare together, achieve sustainable development!</p>
@@ -56,38 +70,6 @@
         </div>
     </section>
 
-    <script src="js/main.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const textElement = document.querySelector('.txt2');
-            const chars = textElement.textContent.split('');
-            textElement.textContent = '';
-
-            chars.forEach(char => {
-                const span = document.createElement('span');
-                span.textContent = char;
-                span.style.opacity = '0';
-                span.style.transform = 'translateY(50px)';
-                textElement.appendChild(span);
-            });
-
-            const charSpans = document.querySelectorAll('.txt2 span');
-            charSpans.forEach((span, index) => {
-                setTimeout(() => {
-                    span.style.transition = 'all 0.8s ease';
-                    span.style.opacity = '1';
-                    span.style.transform = 'translateY(0)';
-                }, 50 * index);
-            });
-
-            const bar = document.querySelector('.bar');
-            bar.style.transformOrigin = 'left';
-            bar.style.transform = 'scaleX(0)';
-            setTimeout(() => {
-                bar.style.transition = 'transform 1s ease-out';
-                bar.style.transform = 'scaleX(1)';
-            }, charSpans.length * 50);
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
