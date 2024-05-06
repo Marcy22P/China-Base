@@ -1,8 +1,14 @@
 document.addEventListener('DOMContentLoaded', function() {
     const canvas = document.getElementById('canvas');
     const ctx = canvas.getContext('2d');
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    resizeCanvas(); // Assicurati che il canvas sia ridimensionato correttamente
+
+    function resizeCanvas() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+    }
+
+    window.onresize = resizeCanvas; // Ridimensiona il canvas quando la finestra cambia dimensione
 
     const stars = [];
     const maxStars = 100; // Numero massimo di stelle
@@ -34,7 +40,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 const dx = stars[i].x - stars[j].x;
                 const dy = stars[i].y - stars[j].y;
                 const distance = Math.sqrt(dx * dx + dy * dy);
-
                 if (distance < 150) {
                     opacityValue = 1 - (distance / 150);
                     ctx.strokeStyle = `rgba(255,255,0,${opacityValue})`;
