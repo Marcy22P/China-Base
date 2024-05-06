@@ -49,19 +49,25 @@
             position: relative;
         }
 
-        @keyframes textFadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .typewriter p {
+            border-right: 2px solid white;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+            font-size: 20px;
+            margin: 0 auto;
+            text-align: center;
+            max-width: 100%;
         }
 
-        .animated-text {
-            animation: textFadeInUp 1.5s ease-out forwards;
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: white }
         }
     </style>
 </head>
@@ -76,7 +82,9 @@
     </header>
 
     <section id="introduction">
-        <p class="animated-text">March forward, share welfare together, achieve sustainable development!</p>
+        <div class="typewriter">
+            <p id="typewriter-text">March forward, share welfare together, achieve sustainable development!</p>
+        </div>
         <div class="buttons">
             <a href="https://app.uniswap.org/swap?outputCurrency=0xCaa6D4049E667ffd88457A1733d255eed02996Bb&chain=base" class="btn" target="_blank">Buy the Token</a>
             <a href="https://dexscreener.com/base/0x1a9eac4aed039489c0f7cb837247921079510fa9" class="btn" target="_blank">View the Chart</a>
