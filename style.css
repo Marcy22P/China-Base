@@ -1,35 +1,30 @@
-body, html {
+html, body {
     height: 100%;
     margin: 0;
     font-family: 'Arial', sans-serif;
-    overflow-x: hidden; /* Assicura che l'animazione non causi scrollbar orizzontali */
+    overflow-x: hidden; /* Previeni scrollbar orizzontali */
     padding-top: 50px; /* Spazio per l'header fisso */
-}
-
-body {
-    background: linear-gradient(120deg, #0a0a0a, #0f0f0f);
+    background: linear-gradient(120deg, #0a0a0a, #0f0f0f); /* Sfondo con gradiente */
     color: #fff;
     position: relative;
     background-size: cover;
     background-attachment: fixed;
 }
 
-/* Header fisso e trasparente */
 header {
-    position: fixed; /* Mantiene l'header in posizione fissa */
-    top: 0; /* Allinea l'header in cima alla pagina */
-    width: 100%; /* Assicura che l'header si estenda per tutta la larghezza della pagina */
-    background: rgba(0, 0, 0, 0.5); /* Nero con un'opacità al 50% */
-    color: white; /* Testo bianco */
-    padding: 10px 20px; /* Spaziatura interna */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sfumatura per distinguerlo dal contenuto sottostante */
-    z-index: 1000; /* Assicura che l'header sia sopra gli altri elementi della pagina */
-    font-size: 20px; /* Dimensione del testo */
-    font-weight: bold; /* Grassetto */
-    text-align: left; /* Allineamento del testo a sinistra */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
 }
 
-/* Aggiungiamo un div per l'animazione dello sfondo */
 .background-animation {
     position: absolute;
     top: 0;
@@ -54,7 +49,7 @@ section {
     justify-content: center;
     align-items: center;
     text-align: center;
-    position: relative; /* Importante per garantire che il contenuto sia sopra lo sfondo */
+    position: relative;
     z-index: 1;
 }
 
@@ -73,24 +68,23 @@ footer {
     padding: 10px 20px;
     margin: 5px;
     text-decoration: none;
-    border-radius: 10px; /* Modifica il raggio del bordo */
-    background-color: #488aec; /* Cambia il colore di sfondo */
-    color: #fff; /* Cambia il colore del testo */
+    border-radius: 10px;
+    background-color: #488aec;
+    color: #fff;
     display: inline-block;
     font-weight: bold;
     transition: background-color 0.3s, transform 0.3s;
 }
 
 .btn:hover {
-    background-color: #fff; /* Cambia il colore di sfondo al passaggio del mouse */
-    color: #488aec; /* Cambia il colore del testo al passaggio del mouse */
-    transform: translateY(-3px); /* Effetto di sollevamento */
+    background-color: #fff;
+    color: #488aec;
+    transform: translateY(-3px);
 }
 
 .intro-gif {
-    max-width: 100%; /* Imposta una larghezza massima per essere responsive */
-    height: auto; /* Mantiene l'aspetto proporzionale dell'immagine */
-    display: block; /* Assicura che l'immagine non abbia spazi extra attorno */
-    margin: 20px auto; /* Centra l'immagine e aggiunge spazio sopra e sotto */
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
 }
-
