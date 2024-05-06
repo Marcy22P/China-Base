@@ -1,0 +1,100 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    overflow-x: hidden; /* Previeni scrollbar orizzontali */
+    padding-top: 50px; /* Spazio per l'header fisso */
+    background: linear-gradient(120deg, #0a0a0a, #0f0f0f); /* Sfondo con gradiente */
+    color: #fff;
+    position: relative;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.background-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('china-landscape.jpg'); /* Sostituisci con il percorso della tua immagine */
+    background-size: cover;
+    z-index: -2; /* Più basso di tutto tranne il colore di sfondo */
+    animation: moveBackground 30s linear infinite;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Sopra l'immagine di sfondo, ma sotto tutto il resto */
+}
+
+@keyframes moveBackground {
+    0% { transform: scale(1) translateX(0); }
+    50% { transform: scale(1.1) translateX(-10%); }
+    100% { transform: scale(1) translateX(0); }
+}
+
+section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    z-index: 1;
+}
+
+.btn {
+    padding: 10px 20px;
+    margin: 5px;
+    text-decoration: none;
+    border-radius: 10px;
+    background-color: #488aec;
+    color: #fff;
+    display: inline-block;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+    background-color: #fff;
+    color: #488aec;
+    transform: translateY(-3px);
+}
+
+.intro-gif {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
