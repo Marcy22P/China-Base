@@ -70,27 +70,23 @@ footer {
 }
 
 .btn {
-    background-color: #de2910; /* Rosso */
-    color: #ffde00; /* Oro */
     padding: 10px 20px;
     margin: 5px;
     text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s, transform 0.3s;
+    border-radius: 10px; /* Modifica il raggio del bordo */
+    background-color: #488aec; /* Cambia il colore di sfondo */
+    color: #fff; /* Cambia il colore del testo */
     display: inline-block;
     font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 .btn:hover {
-    background-color: #ffde00; /* Oro */
-    color: #de2910; /* Rosso */
-    transform: translateY(-5px); /* Effetto di sollevamento */
+    background-color: #fff; /* Cambia il colore di sfondo al passaggio del mouse */
+    color: #488aec; /* Cambia il colore del testo al passaggio del mouse */
+    transform: translateY(-3px); /* Effetto di sollevamento */
 }
 
-.buttons {
-    text-align: center; /* Centra i bottoni nella sezione */
-    padding: 20px;
-}
 .intro-gif {
     max-width: 100%; /* Imposta una larghezza massima per essere responsive */
     height: auto; /* Mantiene l'aspetto proporzionale dell'immagine */
