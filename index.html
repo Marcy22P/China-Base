@@ -10,7 +10,7 @@
             margin: 0;
             padding: 0;
             overflow: hidden;
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             background: linear-gradient(120deg, #0a0a0a, #0f0f0f);
             height: 100%;
             position: relative;
@@ -22,13 +22,19 @@
             left: 0;
             width: 100%;
             height: 100%;
-            z-index: -1; /* Ensure it stays behind other content */
+            background: url('china-landscape.jpg');
+            background-size: cover;
+            z-index: -2; /* Più basso di tutto tranne il colore di sfondo */
+            animation: moveBackground 30s linear infinite;
         }
 
         canvas {
-            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
             height: 100%;
+            z-index: -1; /* Sopra l'immagine di sfondo, ma sotto tutto il resto */
         }
 
         header {
