@@ -61,10 +61,47 @@ body, html {
     width: 100%;
 }
 
+.card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px; /* Dimensione della card */
+    height: 300px; /* Altezza della card */
+    background-color: red; /* Colore rosso per la card */
+    border-radius: 10px; /* Bordi arrotondati */
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombra per dare profondità */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: shine 5s infinite ease-in-out; /* Animazione di brillamento */
+}
+
+.star {
+    position: absolute;
+    top: 10px; /* Posizione della stella in alto a sinistra */
+    left: 10px;
+    width: 50px;
+    height: 50px;
+    background-color: yellow; /* Stelle di colore giallo */
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); /* Forma di stella */
+    animation: twinkle 1s infinite alternate; /* Animazione sbrilluccicante */
+}
+
+@keyframes shine {
+    0%, 100% { box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
+    50% { box-shadow: 0 4px 20px rgba(255, 255, 0, 0.5); }
+}
+
+@keyframes twinkle {
+    from { transform: scale(1); }
+    to { transform: scale(1.1); }
+}
+
 .center-image {
-    width: 250px; /* Dimensione aumentata */
+    width: 200px; /* Dimensione dell'immagine di Xi ridotta per adattarsi */
     height: auto;
-    margin-bottom: 20px;
 }
 
 .text {
@@ -99,6 +136,7 @@ body, html {
     padding: 10px 20px;
     text-decoration: none;
     font-size: 18px;
+    font-family: "Jaro", sans-serif;
     border-radius: 5px;
     margin-top: 5px; /* Ridotto lo spazio sopra il bottone */
 }
