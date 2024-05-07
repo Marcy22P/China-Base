@@ -17,6 +17,7 @@ body {
     width: 100%;
     height: 100%;
     background: linear-gradient(to right, #ff0000, #ffff00);
+    background-size: 200% 200%;
     animation: gradient 10s ease infinite;
   }
   
@@ -27,7 +28,6 @@ body {
     transform: translate(-50%, -50%);
     width: 50%;
     height: auto;
-    animation: star 10s ease infinite;
   }
   
   .xi-jinping img {
@@ -35,12 +35,26 @@ body {
     height: auto;
   }
   
-  @keyframes gradient {
-    0% { background-position: 0% 0%; }
-    100% { background-position: 100% 0%; }
+  .star {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px #ffffff;
+    animation: star-animation 10s linear infinite;
   }
   
-  @keyframes star {
-    0% { filter: hue-rotate(0deg); }
-    100% { filter: hue-rotate(360deg); }
+  @keyframes gradient {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 0%; }
+    100% { background-position: 0% 0%; }
+  }
+  
+  @keyframes star-animation {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
   }
