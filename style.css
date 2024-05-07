@@ -49,7 +49,6 @@ body, html {
     50% {transform: translateY(-20px) scaleX(1.2);} /* Onda che oscilla e si espande */
 }
 
-/* Aggiungo altre onde per sovrapposizione con diverse altezze e opacità */
 .wave2 {
     position: absolute;
     bottom: 20px;
@@ -82,6 +81,7 @@ body, html {
     animation: waveMotion 9s ease-in-out infinite;
     opacity: 0.2;
 }
+
 .content {
     position: absolute;
     top: 50%;
@@ -93,7 +93,7 @@ body, html {
 }
 
 .center-image {
-    width: 100px;  /* Ridotto la dimensione */
+    width: 150px;  /* Dimensione ridotta */
     height: auto;  /* Mantenuto l'aspetto proporzionale */
     position: absolute;
     top: 50%;  /* Centrato verticalmente */
@@ -102,12 +102,10 @@ body, html {
     z-index: 2;  /* Assicurato che sia sopra le stelle */
 }
 
-
 .text {
     font-size: 24px;
     line-height: 1.4;
     z-index: 3;  /* Più alto per garantire la visibilità sopra l'immagine */
-
 }
 
 .buy-button {
