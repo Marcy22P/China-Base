@@ -102,9 +102,9 @@ body, html {
 }
 
 .center-image {
-    width: 70%; /* Assicurarsi che riempia la card */
+    width: 100%; /* Assicurarsi che riempia la card */
     height: auto;
-    margin-bottom: 20px; /* Margin ridotto */
+    margin-bottom: 10px; /* Margin ridotto */
 }
 
 .text {
