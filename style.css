@@ -53,12 +53,13 @@ body, html {
 
 .content {
     position: absolute;
-    top: 65%; /* Modificato per posizionare il testo leggermente sotto la card */
+    top: 62%; /* Ridotto per ridurre la distanza dalla card */
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
     z-index: 100;
     width: 100%;
+    font-family: "Jaro", sans-serif; /* Font aggiornato */
 }
 
 .card {
@@ -69,7 +70,7 @@ body, html {
     width: 350px;
     height: 250px;
     padding: 20px;
-    background: linear-gradient(145deg, #ccc, #e6e6e6);
+    background: #d40000; /* Cambiato in rosso */
     border: 1px solid #bbb;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
@@ -94,7 +95,7 @@ body, html {
 
 @keyframes shine {
     0%, 100% { box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
-    50% { box-shadow: 0 4px 20px rgba(255, 255, 0, 0.5); }
+    50% { box-shadow: 0 4px 20px rgba(255, 255, 255, 0.8); }
 }
 
 @keyframes twinkle {
@@ -110,11 +111,7 @@ body, html {
 }
 
 .text, .title, .subtitle, .address, .buy-button {
-    text-align: center;
     color: white;
-    font-family: "Arial", sans-serif;
-    margin-bottom: 20px;
-    margin-top: 10px;
 }
 
 .title, .subtitle, .address {
