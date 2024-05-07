@@ -23,15 +23,16 @@ body, html {
     z-index: 10;
     border: none; /* Nessun bordo */
     outline: none; /* Nessun contorno */
+    clip-path: inset(50%); /* Modifica in base al bordo reale dell'immagine */
 }
 
 .star {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: calc(50% - 50px); /* Centrato verticalmente rispetto all'origine */
+    left: calc(50% - 50px); /* Centrato orizzontalmente rispetto all'origine */
     width: 100px;
     height: 100px;
-    background-image: url('star.png'); /* Assicurati di avere una stella che vuoi usare */
+    background-image: url('star.png');
     background-size: contain;
     background-repeat: no-repeat;
     animation: pulse 2s infinite ease-in-out;
