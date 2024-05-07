@@ -2,7 +2,7 @@ body, html {
     height: 100%;
     margin: 0;
     overflow: hidden;
-    background: black; /* Base background */
+    background: black; /* Colore di sfondo base */
 }
 
 .star-sky {
@@ -18,8 +18,11 @@ body, html {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 300px; /* Dimensioni dell'immagine */
+    width: auto; /* Larghezza automatica per mantenere le proporzioni */
+    height: 60vh; /* Altezza basata sul viewport, regolabile a piacimento */
     z-index: 10;
+    border: none; /* Nessun bordo */
+    outline: none; /* Nessun contorno */
 }
 
 .star {
