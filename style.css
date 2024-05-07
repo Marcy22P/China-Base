@@ -67,17 +67,18 @@ body, html {
     top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 300px;
-    height: 180px;
     background-color: red;
     border-radius: 10px;
-    padding: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     display: flex;
     align-items: center;
-    justify-content: center;
     animation: shine 5s infinite ease-in-out;
     z-index: 15; /* Aumentato per stare sopra il testo */
+    width: 350px; /* Larghezza aumentata */
+    height: 250px; /* Altezza aumentata per adattarsi meglio */
+    padding: 20px; /* Padding aumentato per centrare meglio il contenuto */
+    justify-content: space-around; /* Migliora la distribuzione degli spazi */
+
 }
 
 .star-card {
@@ -102,9 +103,9 @@ body, html {
 }
 
 .center-image {
-    width: 100%; /* Assicurarsi che riempia la card */
-    height: auto;
     margin-bottom: 10px; /* Margin ridotto */
+    max-width: 100%; /* Assicura che l'immagine non fuoriesca dalla card */
+    max-height: 100%; /* Altezza massima per prevenire l'overflow */
 }
 
 .text {
