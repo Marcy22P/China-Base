@@ -138,12 +138,12 @@ body, html {
     top: 80%; /* Posizione regolata per distanziare dai bottoni social */
     left: 50%;
     transform: translateX(-50%);
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .social-buttons {
     position: absolute;
-    top: 82%;
+    top: 88%; /* Aumentato per evitare sovrapposizione con il bottone 'Buy' */
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -157,20 +157,20 @@ body, html {
     align-items: center;
     padding: 10px;
     text-decoration: none;
-    color: white; /* Colore del testo */
-    font-size: 24px; /* Dimensione dell'icona */
-    border-radius: 50%; /* Bottoni rotondi */
-    width: 50px; /* Larghezza uniforme */
-    height: 50px; /* Altezza uniforme */
-    background-color: red; /* Colore di fondo rosso */
+    color: white;
+    font-size: 24px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: red;
     transition: background-color 0.3s, transform 0.3s;
 }
 
 .social-button:hover {
-    background-color: darkred; /* Colore al passaggio del mouse */
-    transform: scale(1.1); /* Effetto di ingrandimento al passaggio del mouse */
+    background-color: darkred;
+    transform: scale(1.1);
 }
 
 .telegram .fa-telegram-plane, .twitter .fa-twitter, .dexscreener .fa-chart-line {
-    color: white; /* Assicura che le icone siano bianche */
+    color: white;
 }
