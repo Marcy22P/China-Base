@@ -53,11 +53,11 @@ body, html {
 
 .content {
     position: absolute;
-    top: 65%; /* Distanza ridotta */
+    top: 60%; /* Aggiustato per posizionare il testo sotto la card */
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
-    z-index: 5; 
+    z-index: 5; /* Ridotto per posizionare sotto alla card */
     width: 100%;
     font-family: "Jaro", sans-serif;
 }
@@ -70,7 +70,7 @@ body, html {
     width: 350px;
     height: 250px;
     padding: 20px;
-    background: linear-gradient(145deg, #b30000, #ff0000);
+    background: linear-gradient(145deg, #b30000, #ff0000); /* Effetto metallico */
     border: 1px solid #bbb;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
@@ -78,7 +78,7 @@ body, html {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    animation: metalShine 5s infinite ease-in-out, sparkle 2s infinite ease-in-out;
+    animation: metalShine 5s infinite ease-in-out;
     z-index: 10;
 }
 
@@ -87,11 +87,10 @@ body, html {
     50% { background-position: 100% 50%; }
 }
 
-@keyframes sparkle {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.6; } /* Effetto scintillante */
+@keyframes shine {
+    0%, 100% { box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
+    50% { box-shadow: 0 4px 20px rgba(255, 255, 0, 0.5); }
 }
-
 .star-card {
     position: absolute;
     top: 10px;
@@ -117,12 +116,12 @@ body, html {
 
 .text, .title, .subtitle, .address, .buy-button {
     color: white;
-    font-family: "Jaro", sans-serif;
+    font-family: "Jaro", sans-serif; /* Font aggiornato per tutti i testi */
 }
 
 .title, .subtitle, .address {
     font-weight: bold;
-    margin-top: 5px;
+    margin-top: 5px; /* Margini ridotti per compattezza */
 }
 
 .title { font-size: 38px; }
@@ -136,7 +135,8 @@ body, html {
     font-size: 18px;
     border-radius: 5px;
     position: absolute;
-    top: 75%; /* Posizione aggiustata */
+    top: auto; /* Posizione auto per essere al di sotto dei testi */
     left: 50%;
     transform: translateX(-50%);
+    margin-top: 20px; /* Margine aggiunto per separare dal testo sopra */
 }
