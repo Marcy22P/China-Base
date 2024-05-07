@@ -1,60 +1,44 @@
-body {
+body, html {
+    height: 100%;
     margin: 0;
-    padding: 0;
     overflow: hidden;
-  }
-  
-  .container {
+    background: black; /* Base background */
+}
+
+.star-sky {
     position: relative;
     width: 100%;
-    height: 100vh;
-  }
-  
-  .background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
     height: 100%;
-    background: linear-gradient(to right, #ff0000, #ffff00);
-    background-size: 200% 200%;
-    animation: gradient 10s ease infinite;
-  }
-  
-  .xi-jinping {
+    background: linear-gradient(rgba(204, 0, 0, 0.8), rgba(0, 0, 204, 0.8));
+    overflow: hidden;
+}
+
+.center-image {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 50%;
-    height: auto;
-  }
-  
-  .xi-jinping img {
-    width: 100%;
-    height: auto;
-  }
-  
-  .star {
+    width: 300px; /* Dimensioni dell'immagine */
+    z-index: 10;
+}
+
+.star {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) rotate(0deg);
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: #ffffff;
-    box-shadow: 0 0 10px #ffffff;
-    animation: star-animation 10s linear infinite;
-  }
-  
-  @keyframes gradient {
-    0% { background-position: 0% 0%; }
-    50% { background-position: 100% 0%; }
-    100% { background-position: 0% 0%; }
-  }
-  
-  @keyframes star-animation {
-    0% { transform: translate(-50%, -50%) rotate(0deg); }
-    100% { transform: translate(-50%, -50%) rotate(360deg); }
-  }
+    width: 100px;
+    height: 100px;
+    background-image: url('star.png'); /* Assicurati di avere una stella che vuoi usare */
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: pulse 2s infinite ease-in-out;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+}
