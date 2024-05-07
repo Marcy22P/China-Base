@@ -93,14 +93,21 @@ body, html {
 }
 
 .center-image {
-    width: 300px;
-    height: auto;
-    margin-bottom: 20px;
+    width: 100px;  /* Ridotto la dimensione */
+    height: auto;  /* Mantenuto l'aspetto proporzionale */
+    position: absolute;
+    top: 50%;  /* Centrato verticalmente */
+    left: 50%;  /* Centrato orizzontalmente */
+    transform: translate(-50%, -50%);
+    z-index: 2;  /* Assicurato che sia sopra le stelle */
 }
+
 
 .text {
     font-size: 24px;
     line-height: 1.4;
+    z-index: 3;  /* Più alto per garantire la visibilità sopra l'immagine */
+
 }
 
 .buy-button {
@@ -112,4 +119,5 @@ body, html {
     font-size: 18px;
     border-radius: 5px;
     margin-top: 20px;
+    z-index: 3;  /* Più alto per garantire la visibilità sopra l'immagine */
 }
