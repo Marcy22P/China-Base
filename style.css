@@ -67,18 +67,17 @@ body, html {
     top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 350px; /* Larghezza specificata per una maggiore area di visualizzazione */
+    height: 250px; /* Altezza adeguata per contenere adeguatamente l'immagine */
+    padding: 20px; /* Padding incrementato per una migliore estetica */
     background-color: red;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     display: flex;
     align-items: center;
+    justify-content: center; /* Centra l'immagine all'interno della card */
     animation: shine 5s infinite ease-in-out;
-    z-index: 15; /* Aumentato per stare sopra il testo */
-    width: 350px; /* Larghezza aumentata */
-    height: 250px; /* Altezza aumentata per adattarsi meglio */
-    padding: 20px; /* Padding aumentato per centrare meglio il contenuto */
-    justify-content: space-around; /* Migliora la distribuzione degli spazi */
-
+    z-index: 15; /* Aumentato per assicurare che la card sia sopra gli altri elementi */
 }
 
 .star-card {
@@ -103,9 +102,10 @@ body, html {
 }
 
 .center-image {
-    margin-bottom: 10px; /* Margin ridotto */
-    max-width: 100%; /* Assicura che l'immagine non fuoriesca dalla card */
-    max-height: 100%; /* Altezza massima per prevenire l'overflow */
+    margin-bottom: 10px; /* Margin ridotto per una migliore composizione visiva */
+    width: 100%; /* Assicura che l'immagine riempia completamente la larghezza della card */
+    height: auto; /* Mantenuto auto per mantenere il rapporto aspetto corretto */
+    object-fit: contain; /* Assicura che l'intera immagine sia visibile senza distorsioni */
 }
 
 .text {
