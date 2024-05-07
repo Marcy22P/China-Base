@@ -53,13 +53,13 @@ body, html {
 
 .content {
     position: absolute;
-    top: 62%; /* Ridotto per ridurre la distanza dalla card */
+    top: 55%; /* Ridotto ulteriormente per ridurre la distanza dalla card */
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
     z-index: 100;
     width: 100%;
-    font-family: "Jaro", sans-serif; /* Font aggiornato */
+    font-family: "Jaro", sans-serif;
 }
 
 .card {
@@ -70,7 +70,7 @@ body, html {
     width: 350px;
     height: 250px;
     padding: 20px;
-    background: #d40000; /* Cambiato in rosso */
+    background: linear-gradient(145deg, #b30000, #ff0000); /* Effetto metallico aggiunto */
     border: 1px solid #bbb;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
@@ -78,12 +78,17 @@ body, html {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    animation: shine 5s infinite ease-in-out;
+    animation: metalShine 5s infinite ease-in-out;
     z-index: 15;
 }
 
+@keyframes metalShine {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
 .star-card {
-    position: absolute;
+    position:absolute;
     top: 10px;
     left: 10px;
     width: 50px;
@@ -91,11 +96,6 @@ body, html {
     background-color: yellow;
     clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
     animation: twinkle 1s infinite alternate;
-}
-
-@keyframes shine {
-    0%, 100% { box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
-    50% { box-shadow: 0 4px 20px rgba(255, 255, 255, 0.8); }
 }
 
 @keyframes twinkle {
@@ -112,6 +112,7 @@ body, html {
 
 .text, .title, .subtitle, .address, .buy-button {
     color: white;
+    font-family: "Jaro", sans-serif; /* Font aggiornato per tutti i testi */
 }
 
 .title, .subtitle, .address {
@@ -128,4 +129,5 @@ body, html {
     text-decoration: none;
     font-size: 18px;
     border-radius: 5px;
+    margin-top: 20px; /* Spazio aggiunto per evitare sovrapposizioni */
 }
