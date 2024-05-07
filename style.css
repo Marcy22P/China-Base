@@ -53,32 +53,32 @@ body, html {
 
 .content {
     position: absolute;
-    top: 60%; /* Abbassato per posizionare il testo subito sotto la card */
+    top: 65%; /* Modificato per posizionare il testo leggermente sotto la card */
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
-    z-index: 100; /* Elevato per assicurare la visibilità sopra altri elementi */
+    z-index: 100;
     width: 100%;
-
 }
 
 .card {
     position: absolute;
-    top: 45%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 350px; /* Larghezza specificata per una maggiore area di visualizzazione */
-    height: 250px; /* Altezza adeguata per contenere adeguatamente l'immagine */
-    padding: 20px; /* Padding incrementato per una migliore estetica */
-    background-color: red;
+    width: 350px;
+    height: 250px;
+    padding: 20px;
+    background: linear-gradient(145deg, #ccc, #e6e6e6);
+    border: 1px solid #bbb;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     display: flex;
     align-items: center;
-    align-items: center;
-    overflow: hidden; /* Aggiunto per tagliare tutto ciò che esce */
+    justify-content: center;
+    overflow: hidden;
     animation: shine 5s infinite ease-in-out;
-    z-index: 15; /* Aumentato per assicurare che la card sia sopra gli altri elementi */
+    z-index: 15;
 }
 
 .star-card {
@@ -103,50 +103,32 @@ body, html {
 }
 
 .center-image {
-    width: 100%; /* Assicura che l'immagine riempia completamente la larghezza della card */
-    height: auto; /* Mantenuto auto per mantenere il rapporto aspetto corretto */
-    max-height: 100%; /* Imposta un'altezza massima per evitare che l'immagine esca */
-    object-fit: contain; /* Assicura che l'intera immagine sia visibile senza distorsioni */
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    object-fit: contain;
 }
 
-.text {
+.text, .title, .subtitle, .address, .buy-button {
     text-align: center;
     color: white;
-    font-family: "Jaro", sans-serif;
+    font-family: "Arial", sans-serif;
     margin-bottom: 20px;
-    margin-top: 10px; /* Spaziatura aggiunta per separare visivamente i testi */
+    margin-top: 10px;
 }
 
-.title {
-    font-size: 38px;
+.title, .subtitle, .address {
     font-weight: bold;
-    margin-bottom: 10px;
-    margin-top: 10px; /* Spaziatura aggiunta per separare visivamente i testi */
-
 }
 
-.subtitle {
-    font-size: 28px;
-    font-weight: bold;
-    margin-bottom: 5px;
-    margin-top: 10px; /* Spaziatura aggiunta per separare visivamente i testi */
-
-}
-
-.address {
-    font-size: 18px;
-    font-weight: bold;
-    margin-top: 10px; /* Spaziatura aggiunta per separare visivamente i testi */
-}
+.title { font-size: 38px; }
+.subtitle { font-size: 28px; }
+.address { font-size: 18px; }
 
 .buy-button {
-    display: inline-block;
     background-color: red;
-    color: white;
     padding: 10px 20px;
     text-decoration: none;
     font-size: 18px;
-    font-family: "Jaro", sans-serif;
     border-radius: 5px;
-    margin-top: 5px;
 }
