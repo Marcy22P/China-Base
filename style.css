@@ -53,11 +53,11 @@ body, html {
 
 .content {
     position: absolute;
-    top: 63%; /* Posizione aggiustata per la distanza dal card */
+    top: 72%; /* Aggiustato per posizionare il testo sotto la card */
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
-    z-index: 20; /* Z-index aggiustato per sopra la card */
+    z-index: 5; /* Ridotto per posizionare sotto alla card */
     width: 100%;
     font-family: "Jaro", sans-serif;
 }
@@ -78,18 +78,13 @@ body, html {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    animation: metalShine 5s infinite ease-in-out, sparkle 2s infinite ease-in-out;
-    z-index: 15;
+    animation: metalShine 5s infinite ease-in-out;
+    z-index: 10;
 }
 
 @keyframes metalShine {
     0%, 100% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
-}
-
-@keyframes sparkle {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.6; }
 }
 
 .star-card {
@@ -136,7 +131,8 @@ body, html {
     font-size: 18px;
     border-radius: 5px;
     position: absolute;
-    top: 80%; /* Posizione assoluta per evitare sovrapposizioni */
+    top: auto; /* Posizione auto per essere al di sotto dei testi */
     left: 50%;
     transform: translateX(-50%);
+    margin-top: 20px; /* Margine aggiunto per separare dal testo sopra */
 }
