@@ -143,12 +143,12 @@ body, html {
 
 .social-buttons {
     position: absolute;
-    top: 82%; /* Posizione sotto al bottone Buy Now */
+    top: 82%;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    gap: 10px; /* Distanza tra i bottoni */
-    z-index: 20; /* Assicurati che siano visibili sopra gli altri elementi se necessario */
+    gap: 15px;
+    z-index: 20;
 }
 
 .social-button {
