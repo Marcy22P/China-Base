@@ -68,12 +68,29 @@ body, html {
 }
 
 .text {
-    font-size: 20px; /* Font ridimensionato */
-    line-height: 1.6;
+    text-align: center;
     color: white;
-    font-family: 'Arial', sans-serif;
-    margin-bottom: 20px; /* Spazio prima del bottone */
+    font-family: "Jaro", sans-serif;
+    margin-bottom: 20px;
 }
+
+.title {
+    font-size: 38px; /* Più grande e in grassetto */
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 28px; /* Medio e in grassetto */
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.address {
+    font-size: 18px; /* Più piccolo e in grassetto */
+    font-weight: bold;
+}
+
 
 .buy-button {
     display: inline-block;
@@ -85,3 +102,4 @@ body, html {
     border-radius: 5px;
     margin-top: 5px; /* Ridotto lo spazio sopra il bottone */
 }
+
