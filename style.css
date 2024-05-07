@@ -151,16 +151,6 @@ body, html {
     z-index: 20; /* Assicurati che siano visibili sopra gli altri elementi se necessario */
 }
 
-.social-buttons {
-    position: absolute;
-    top: 82%;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 15px;
-    z-index: 20;
-}
-
 .social-button {
     display: flex;
     justify-content: center;
