@@ -6,15 +6,46 @@ body, html {
 }
 
 .animated-background {
+    position: relative;
     width: 100%;
     height: 100%;
-    background: linear-gradient(141deg, #000046 0%, #1CB5E0 75%);
+    background: linear-gradient(141deg, #d40000 0%, #ffcc00 75%);
     background-size: 400% 400%;
-    animation: AnimationName 30s ease infinite;
+    animation: backgroundShift 30s ease infinite;
 }
 
-@keyframes AnimationName {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+@keyframes backgroundShift {
+    0% {background-position: 0% 50%}
+    50% {background-position: 100% 50%}
+    100% {background-position: 0% 50%}
+}
+
+.star {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 0 8px white; /* Aggiunge un bagliore attorno alle stelle */
+    animation: flicker 3s infinite alternate;
+}
+
+@keyframes flicker {
+    0%, 100% {opacity: 1;}
+    50% {opacity: 0.5;}
+}
+
+.wave {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 150px;
+    background: rgba(255, 204, 0, 0.6);
+    box-shadow: 0 -5px 5px -5px #d40000 inset;
+    animation: waveMove 5s ease-in-out infinite alternate;
+}
+
+@keyframes waveMove {
+    from {transform: translateY(0);}
+    to {transform: translateY(-20px);}
 }
