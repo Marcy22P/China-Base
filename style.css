@@ -95,3 +95,27 @@ section {
         margin: 10px; /* Maggiore spazio tra i bottoni */
     }
 }
+
+.container {
+    display: flex;
+    height: 100vh; /* Altezza completa della viewport */
+    align-items: stretch; /* Allinea verticalmente */
+}
+
+.left-panel {
+    flex: 1; /* Prende la metà dello spazio disponibile */
+    background: url('path_to_xi_jinping_image.jpg') no-repeat center center; /* Sostituisci con il percorso corretto dell'immagine */
+    background-size: cover; /* Copre l'intera area del div */
+}
+
+.right-panel {
+    flex: 1; /* Prende l'altra metà dello spazio disponibile */
+    padding: 20px; /* Aggiunge un po' di spazio intorno al contenuto */
+    overflow-y: auto; /* Permette lo scorrimento se il contenuto è troppo lungo */
+}
+
+/* Assicurati che il testo e i bottoni siano visibili su sfondi scuri */
+.header, .section, .btn {
+    color: white;
+    background: rgba(0, 0, 0, 0.5); /* Sfondo semitrasparente per migliorare la leggibilità */
+}
