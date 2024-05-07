@@ -55,7 +55,7 @@ body, html {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -70%); /* Spostato leggermente più in alto */
+    transform: translate(-50%, -70%);
     text-align: center;
     z-index: 10;
     width: 100%;
@@ -66,27 +66,27 @@ body, html {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 250px; /* Dimensione della card */
-    height: 300px; /* Altezza della card */
-    background-color: red; /* Colore rosso per la card */
-    border-radius: 10px; /* Bordi arrotondati */
+    width: 250px;
+    height: 300px;
+    background-color: red;
+    border-radius: 10px;
     padding: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombra per dare profondità */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
     justify-content: center;
-    animation: shine 5s infinite ease-in-out; /* Animazione di brillamento */
+    animation: shine 5s infinite ease-in-out;
 }
 
-.star {
+.star-card {
     position: absolute;
-    top: 10px; /* Posizione della stella in alto a sinistra */
+    top: 10px;
     left: 10px;
     width: 50px;
     height: 50px;
-    background-color: yellow; /* Stelle di colore giallo */
-    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); /* Forma di stella */
-    animation: twinkle 1s infinite alternate; /* Animazione sbrilluccicante */
+    background-color: yellow;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    animation: twinkle 1s infinite alternate;
 }
 
 @keyframes shine {
@@ -100,7 +100,7 @@ body, html {
 }
 
 .center-image {
-    width: 200px; /* Dimensione dell'immagine di Xi ridotta per adattarsi */
+    width: 200px;
     height: auto;
 }
 
@@ -112,22 +112,21 @@ body, html {
 }
 
 .title {
-    font-size: 38px; /* Più grande e in grassetto */
+    font-size: 38px;
     font-weight: bold;
     margin-bottom: 10px;
 }
 
 .subtitle {
-    font-size: 28px; /* Medio e in grassetto */
+    font-size: 28px;
     font-weight: bold;
     margin-bottom: 5px;
 }
 
 .address {
-    font-size: 18px; /* Più piccolo e in grassetto */
+    font-size: 18px;
     font-weight: bold;
 }
-
 
 .buy-button {
     display: inline-block;
@@ -138,6 +137,5 @@ body, html {
     font-size: 18px;
     font-family: "Jaro", sans-serif;
     border-radius: 5px;
-    margin-top: 5px; /* Ridotto lo spazio sopra il bottone */
+    margin-top: 5px;
 }
-
