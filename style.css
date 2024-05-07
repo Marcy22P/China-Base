@@ -53,17 +53,18 @@ body, html {
 
 .content {
     position: absolute;
-    top: 60%; /* Posizione aggiustata per allineare le scritte subito sotto la card */
+    top: 60%; /* Abbassato per posizionare il testo subito sotto la card */
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
     text-align: center;
-    z-index: 20;
+    z-index: 100; /* Elevato per assicurare la visibilità sopra altri elementi */
     width: 100%;
+
 }
 
 .card {
     position: absolute;
-    top: 40%; /* Posizione verticale aggiustata per lasciare spazio per le scritte sotto */
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 300px;
@@ -76,7 +77,18 @@ body, html {
     align-items: center;
     justify-content: center;
     animation: shine 5s infinite ease-in-out;
-    z-index: 15;
+    z-index: 15; /* Aumentato per stare sopra il testo */
+}
+
+.star-card {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 50px;
+    height: 50px;
+    background-color: yellow;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    animation: twinkle 1s infinite alternate;
 }
 
 @keyframes shine {
@@ -84,32 +96,49 @@ body, html {
     50% { box-shadow: 0 4px 20px rgba(255, 255, 0, 0.5); }
 }
 
+@keyframes twinkle {
+    from { transform: scale(1); }
+    to { transform: scale(1.1); }
+}
+
 .center-image {
     width: 100%; /* Assicurarsi che riempia la card */
     height: auto;
+    margin-bottom: 20px; /* Margin ridotto */
 }
 
 .text {
+    text-align: center;
     color: white;
     font-family: "Jaro", sans-serif;
+    margin-bottom: 20px;
+    margin-top: 10px; /* Spaziatura aggiunta per separare visivamente i testi */
 }
 
 .title {
-    font-size: 24px; /* Grandezza del font ridotta per coerenza visiva */
+    font-size: 38px;
     font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 10px; /* Spaziatura aggiunta per separare visivamente i testi */
+
 }
 
 .subtitle {
-    font-size: 20px; /* Leggermente più piccolo */
+    font-size: 28px;
     font-weight: bold;
+    margin-bottom: 5px;
+    margin-top: 10px; /* Spaziatura aggiunta per separare visivamente i testi */
+
 }
 
 .address {
-    font-size: 16px; /* Il più piccolo per meno enfasi */
+    font-size: 18px;
     font-weight: bold;
+    margin-top: 10px; /* Spaziatura aggiunta per separare visivamente i testi */
 }
 
 .buy-button {
+    display: inline-block;
     background-color: red;
     color: white;
     padding: 10px 20px;
@@ -117,4 +146,5 @@ body, html {
     font-size: 18px;
     font-family: "Jaro", sans-serif;
     border-radius: 5px;
+    margin-top: 5px;
 }
