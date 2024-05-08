@@ -38,19 +38,49 @@ body, html {
     width: 100%;
     bottom: 0;
     border-radius: 50% / 20%;
+}
+
+.wave {
+    height: 50px;
+    background: rgba(255, 0, 0, 0.6);
+    opacity: 0.5;
     animation: waveMotion 6s ease-in-out infinite;
 }
 
-.wave { height: 50px; background: rgba(255, 0, 0, 0.6); opacity: 0.5; }
-.wave2 { height: 60px; background: rgba(255, 255, 0, 0.816); opacity: 0.4; bottom: 20px; }
-.wave3 { height: 70px; background: rgba(255, 204, 0, 0.3); opacity: 0.3; bottom: 40px; }
-.wave4 { height: 80px; background: rgba(255, 0, 0, 0.2); opacity: 0.2; bottom: 60px; }
+.wave2 {
+    height: 60px;
+    background: rgba(255, 255, 0, 0.816);
+    opacity: 0.4;
+    bottom: 20px;
+    animation: waveMotion 7s ease-in-out infinite; /* Diversa durata */
+}
+
+.wave3 {
+    height: 70px;
+    background: rgba(255, 204, 0, 0.3);
+    opacity: 0.3;
+    bottom: 40px;
+    animation: waveMotion 8s ease-in-out infinite; /* Diversa durata e ritardo */
+    animation-delay: 1s; /* Ritardo nell'avvio dell'animazione */
+}
+
+.wave4 {
+    height: 80px;
+    background: rgba(255, 0, 0, 0.2);
+    opacity: 0.2;
+    bottom: 60px;
+    animation: waveMotion2 6s ease-in-out infinite; /* Leggermente diversa animazione */
+}
 
 @keyframes waveMotion {
     0%, 100% { transform: translateY(0) scaleX(1); }
     50% { transform: translateY(-20px) scaleX(1.2); }
 }
 
+@keyframes waveMotion2 {
+    0%, 100% { transform: translateY(0) scaleX(1); }
+    50% { transform: translateY(-25px) scaleX(1.25); } /* Maggiore intensità del movimento */
+}
 
 .text-content {
     position: absolute;
