@@ -133,7 +133,7 @@ body, html {
 
 .social-buttons {
     position: absolute;
-    top: 92%; /* Abbassato ulteriormente per evitare sovrapposizioni */
+    top: 60%; /* Abbassato ulteriormente per evitare sovrapposizioni */
     left: 50%;
     transform: translateX(-50%);
     display: flex;
