@@ -46,18 +46,13 @@ body, html {
 .wave3 { height: 70px; background: rgba(255, 204, 0, 0.3); opacity: 0.3; bottom: 40px; }
 .wave4 { height: 80px; background: rgba(255, 0, 0, 0.2); opacity: 0.2; bottom: 60px; }
 
-@keyframes waveMotion {
-    0%, 100% {transform: translateY(0) scaleX(1);}
-    50% {transform: translateY(-20px) scaleX(1.2);}
-}
-
 .text-content {
     position: absolute;
-    top: 65%; /* Posizione regolata per stare sotto la card */
+    top: 60%;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
-    z-index: 5; /* Ridotto per posizionare sotto alla card */
+    z-index: 5;
     width: 100%;
     font-family: "Jaro", sans-serif;
 }
@@ -117,7 +112,7 @@ body, html {
 
 .title { font-size: 38px; }
 .subtitle { font-size: 28px; }
-.address { font-size: 18px; }
+.address { font-size: 18px; margin-bottom: 20px; /* Spazio maggiore tra l'indirizzo e il pulsante di acquisto */ }
 
 .text-content div {
     margin-bottom: 5px;
@@ -130,7 +125,7 @@ body, html {
     font-size: 18px;
     border-radius: 5px;
     position: absolute;
-    top: 75%;
+    top: 85%; /* Aggiustato */
     left: 50%;
     transform: translateX(-50%);
     margin-top: 20px;
@@ -138,7 +133,7 @@ body, html {
 
 .social-buttons {
     position: absolute;
-    top: 85%;
+    top: 92%; /* Abbassato ulteriormente per evitare sovrapposizioni */
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -151,7 +146,7 @@ body, html {
     justify-content: center;
     align-items: center;
     padding: 10px;
-    text-decoration: none;
+    text-decoration:none;
     color: white;
     font-size: 24px;
     border-radius: 50%;
