@@ -46,6 +46,12 @@ body, html {
 .wave3 { height: 70px; background: rgba(255, 204, 0, 0.3); opacity: 0.3; bottom: 40px; }
 .wave4 { height: 80px; background: rgba(255, 0, 0, 0.2); opacity: 0.2; bottom: 60px; }
 
+@keyframes waveMotion {
+    0%, 100% { transform: translateY(0) scaleX(1); }
+    50% { transform: translateY(-20px) scaleX(1.2); }
+}
+
+
 .text-content {
     position: absolute;
     top: 40%;
