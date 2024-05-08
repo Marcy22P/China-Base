@@ -33,7 +33,7 @@ body, html {
     50% {transform: translate(5px, -10px);}
 }
 
-.wave,.wave2,.wave3,.wave4 {
+.wave, .wave2, .wave3, .wave4 {
     position: absolute;
     width: 100%;
     bottom: 0;
@@ -48,9 +48,9 @@ body, html {
 
 .text-content {
     position: absolute;
-    top: 45%; /* Adjusted from 50% */
+    top: 60%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
     text-align: center;
     z-index: 5;
     width: 100%;
@@ -59,7 +59,7 @@ body, html {
 
 .card {
     position: absolute;
-    top: 45%; /* Adjusted from 50% */
+    top: 20%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 350px;
@@ -75,7 +75,6 @@ body, html {
     overflow: hidden;
     animation: metalShine 5s infinite ease-in-out;
     z-index: 10;
-    margin-bottom: 10px; /* Added margin bottom */
 }
 
 @keyframes metalShine {
@@ -106,14 +105,14 @@ body, html {
     object-fit: contain;
 }
 
-.text,.title,.subtitle,.address,.buy-button {
+.text, .title, .subtitle, .address, .buy-button {
     color: white;
     font-family: "Jaro", sans-serif;
 }
 
 .title { font-size: 38px; }
 .subtitle { font-size: 28px; }
-.address { font-size: 18px; margin-bottom: 10px; /* Reduced margin bottom */ }
+.address { font-size: 18px; margin-bottom: 20px; /* Spazio maggiore tra l'indirizzo e il pulsante di acquisto */ }
 
 .text-content div {
     margin-bottom: 5px;
@@ -123,30 +122,18 @@ body, html {
     background-color: red;
     padding: 10px 20px;
     text-decoration: none;
-    font-size:18px;
+    font-size: 18px;
     border-radius: 5px;
     position: absolute;
-    top: 90%; /* Adjusted from 85% */
+    top: 85%; /* Aggiustato */
     left: 50%;
     transform: translateX(-50%);
     margin-top: 20px;
 }
 
-/* Add an <a> tag around the Buy button */
-.buy-button {
-    display: inline-block;
-}
-.buy-button a {
-    display: block;
-    width: 100%;
-    height: 100%;
-    text-decoration: none;
-    color: white;
-}
-
 .social-buttons {
     position: absolute;
-    top: 95%; /* Adjusted from 92% */
+    top: 92%; /* Abbassato ulteriormente per evitare sovrapposizioni */
     left: 50%;
     transform: translateX(-50%);
     display: flex;
