@@ -125,7 +125,7 @@ body, html {
     font-size: 18px;
     border-radius: 5px;
     position: absolute;
-    top: 55%; /* Aggiustato */
+    top: 80%; /* Aggiustato */
     left: 50%;
     transform: translateX(-50%);
     margin-top: 10px;
@@ -133,7 +133,7 @@ body, html {
 
 .social-buttons {
     position: absolute;
-    top: 60%; /* Abbassato ulteriormente per evitare sovrapposizioni */
+    top: 90%; /* Abbassato ulteriormente per evitare sovrapposizioni */
     left: 50%;
     transform: translateX(-50%);
     display: flex;
