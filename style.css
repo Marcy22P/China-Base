@@ -13,64 +13,15 @@ body, html {
     background-size: 150% 150%;
 }
 
-.star {
-    position: absolute;
-    width: 3px;
-    height: 3px;
-    background: white;
-    border-radius: 50%;
-    box-shadow: 0 0 8px white;
-    animation: flicker 3s infinite alternate, float 5s infinite;
-}
-
-@keyframes flicker {
-    0%, 100% {opacity: 1;}
-    50% {opacity: 0.5;}
-}
-
-@keyframes float {
-    0%, 100% {transform: translate(0, 0);}
-    50% {transform: translate(5px, -10px);}
-}
-
-.wave, .wave2, .wave3, .wave4 {
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    border-radius: 50% / 20%;
-    animation: waveMotion 6s ease-in-out infinite;
-}
-
-.wave { height: 50px; background: rgba(255, 0, 0, 0.6); opacity: 0.5; }
-.wave2 { height: 60px; background: rgba(255, 255, 0, 0.816); opacity: 0.4; bottom: 20px; }
-.wave3 { height: 70px; background: rgba(255, 204, 0, 0.3); opacity: 0.3; bottom: 40px; }
-.wave4 { height: 80px; background: rgba(255, 0, 0, 0.2); opacity: 0.2; bottom: 60px; }
-
-@keyframes waveMotion {
-    0%, 100% {transform: translateY(0) scaleX(1);}
-    50% {transform: translateY(-20px) scaleX(1.2);}
-}
-
-.content {
-    position: absolute;
-    top: 60%; /* Aggiustato per posizionare il testo sotto la card */
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    z-index: 5; /* Ridotto per posizionare sotto alla card */
-    width: 100%;
-    font-family: "Jaro", sans-serif;
-}
-
 .card {
     position: absolute;
-    top: 40%;
+    top: 20%; /* Centro verticalmente con spazio sopra */
     left: 50%;
     transform: translate(-50%, -50%);
     width: 350px;
     height: 250px;
     padding: 20px;
-    background: linear-gradient(145deg, #b30000, #ff0000); /* Effetto metallico */
+    background: linear-gradient(145deg, #b30000, #ff0000);
     border: 1px solid #bbb;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
@@ -78,67 +29,22 @@ body, html {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    animation: metalShine 5s infinite ease-in-out;
-    z-index: 10;
+    z-index: 10; /* Mantieni un alto z-index */
 }
 
-@keyframes metalShine {
-    0%, 100% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-}
-
-.star-card {
+.text-content {
     position: absolute;
-    top: 10px;
-    left: 10px;
-    width: 50px;
-    height: 50px;
-    background-color: yellow;
-    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-    animation: twinkle 1s infinite alternate;
-}
-
-@keyframes twinkle {
-    from { transform: scale(1); }
-    to { transform: scale(1.1); }
-}
-
-@keyframes shine {
-    0%, 100% { box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
-    50% { box-shadow: 0 4px 20px rgba(255, 255, 0, 0.5); }
-}
-.center-image {
-    width: 100%;
-    height: auto;
-    max-height: 100%;
-    object-fit: contain;
-}
-
-.text, .title, .subtitle, .address, .buy-button {
+    top: 55%; /* Posizione sotto la card */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%; /* Larghezza adatta */
+    text-align: center;
     color: white;
-    font-family: "Jaro", sans-serif; /* Font aggiornato per tutti i testi */
+    z-index: 5; /* Inferiore alla card per sovrapporre correttamente */
 }
 
-.title, .subtitle, .address {
-    font-weight: bold;
-    margin-bottom: 10px; /* Aumentato il margine inferiore per separare meglio i testi */
-    font-size: 1.5rem; /* Adatta a seconda delle tue esigenze */
-}
-
-/* Adattamento per la versione cinese, che apparirà subito sotto alla versione inglese */
-.zh {
-    font-size: 1.2rem; /* Dimensione leggermente più piccola */
-    color: #ccc; /* Colore per distinguere, se desiderato */
-    margin-bottom: 20px; /* Distanza maggiore per separare dal contenuto seguente */
-}
-
-
-.title { font-size: 38px; }
-.subtitle { font-size: 28px; }
-.address { font-size: 18px; }
-
-.text-content div {
-    margin-bottom: 5px; /* Distanza tra le righe */
+.title, .subtitle, .address, .buy-button {
+    margin-bottom: 10px; /* Spazio tra gli elementi */
 }
 
 .buy-button {
@@ -147,21 +53,17 @@ body, html {
     text-decoration: none;
     font-size: 18px;
     border-radius: 5px;
-    position: absolute;
-    top: 75%; /* Posizione aggiustata per stare sotto il testo */
-    left: 50%;
-    transform: translateX(-50%);
-    margin-top: 20px; /* Spazio sufficiente per evitare sovrapposizioni */
+    display: inline-block; /* Cambiato da absolute per flow normale */
+    color: white; /* Assicurati che il testo sia visibile */
 }
 
 .social-buttons {
     position: absolute;
-    top: 85%; /* Posizione abbassata per garantire spazio adeguato */
+    top: 80%; /* Più in basso per evitare sovrapposizioni */
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    gap: 10px; /* Spazio tra i bottoni */
-    z-index: 20;
+    gap: 10px; /* Distanza tra i bottoni */
 }
 
 .social-button {
@@ -176,14 +78,9 @@ body, html {
     width: 50px;
     height: 50px;
     background-color: red;
-    transition: background-color 0.3s, transform 0.3s;
 }
 
 .social-button:hover {
     background-color: darkred;
     transform: scale(1.1);
-}
-
-.telegram .fa-telegram-plane, .twitter .fa-twitter, .dexscreener .fa-chart-line {
-    color: white;
 }
