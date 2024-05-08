@@ -33,7 +33,7 @@ body, html {
     50% {transform: translate(5px, -10px);}
 }
 
-.wave, .wave2, .wave3, .wave4 {
+.wave,.wave2,.wave3,.wave4 {
     position: absolute;
     width: 100%;
     bottom: 0;
@@ -48,9 +48,9 @@ body, html {
 
 .text-content {
     position: absolute;
-    top: 50%; /* Adjusted from 60% */
+    top: 45%; /* Adjusted from 50% */
     left: 50%;
-    transform: translate(-50%, -50%) /* Changed to -50% */;
+    transform: translate(-50%, -50%);
     text-align: center;
     z-index: 5;
     width: 100%;
@@ -59,9 +59,9 @@ body, html {
 
 .card {
     position: absolute;
-    top: 50%; /* Adjusted from 20% */
+    top: 45%; /* Adjusted from 50% */
     left: 50%;
-    transform: translate(-50%, -50%) /* Changed to -50% */;
+    transform: translate(-50%, -50%);
     width: 350px;
     height: 250px;
     padding: 20px;
@@ -75,6 +75,7 @@ body, html {
     overflow: hidden;
     animation: metalShine 5s infinite ease-in-out;
     z-index: 10;
+    margin-bottom: 10px; /* Added margin bottom */
 }
 
 @keyframes metalShine {
@@ -87,7 +88,7 @@ body, html {
     top: 10px;
     left: 10px;
     width: 50px;
-height: 50px;
+    height: 50px;
     background-color: yellow;
     clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
     animation: twinkle 1s infinite alternate;
@@ -105,14 +106,14 @@ height: 50px;
     object-fit: contain;
 }
 
-.text, .title, .subtitle, .address, .buy-button {
+.text,.title,.subtitle,.address,.buy-button {
     color: white;
     font-family: "Jaro", sans-serif;
 }
 
 .title { font-size: 38px; }
 .subtitle { font-size: 28px; }
-.address { font-size: 18px; margin-bottom: 20px; /* Spazio maggiore tra l'indirizzo e il pulsante di acquisto */ }
+.address { font-size: 18px; margin-bottom: 10px; /* Reduced margin bottom */ }
 
 .text-content div {
     margin-bottom: 5px;
@@ -122,10 +123,10 @@ height: 50px;
     background-color: red;
     padding: 10px 20px;
     text-decoration: none;
-    font-size: 18px;
+    font-size:18px;
     border-radius: 5px;
     position: absolute;
-    top: 85%; /* Adjusted from 85% */
+    top: 90%; /* Adjusted from 85% */
     left: 50%;
     transform: translateX(-50%);
     margin-top: 20px;
@@ -145,7 +146,7 @@ height: 50px;
 
 .social-buttons {
     position: absolute;
-    top: 92%;
+    top: 95%; /* Adjusted from 92% */
     left: 50%;
     transform: translateX(-50%);
     display: flex;
