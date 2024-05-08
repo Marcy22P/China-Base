@@ -48,9 +48,9 @@ body, html {
 
 .text-content {
     position: absolute;
-    top: 40%; /* Reduced from 60% */
+    top: 50%; /* Adjusted from 60% */
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%) /* Changed to -50% */;
     text-align: center;
     z-index: 5;
     width: 100%;
@@ -59,9 +59,9 @@ body, html {
 
 .card {
     position: absolute;
-    top: 20%;
+    top: 50%; /* Adjusted from 20% */
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) /* Changed to -50% */;
     width: 350px;
     height: 250px;
     padding: 20px;
@@ -87,7 +87,7 @@ body, html {
     top: 10px;
     left: 10px;
     width: 50px;
-    height: 50px;
+height: 50px;
     background-color: yellow;
     clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
     animation: twinkle 1s infinite alternate;
@@ -125,7 +125,7 @@ body, html {
     font-size: 18px;
     border-radius: 5px;
     position: absolute;
-    top: 85%;
+    top: 85%; /* Adjusted from 85% */
     left: 50%;
     transform: translateX(-50%);
     margin-top: 20px;
