@@ -48,7 +48,7 @@ body, html {
 
 .text-content {
     position: absolute;
-    top: 50%; /* Modificato per elevare leggermente il testo */
+    top: 60%;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
@@ -59,7 +59,7 @@ body, html {
 
 .card {
     position: absolute;
-    top: 15%; /* Leggermente elevata */
+    top: 20%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 350px;
@@ -77,28 +77,68 @@ body, html {
     z-index: 10;
 }
 
-.buy-button {
+@keyframes metalShine {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+.star-card {
     position: absolute;
-    top: 80%; /* Posizione regolata */
-    left: 50%;
-    transform: translateX(-50%);
+    top: 10px;
+    left: 10px;
+    width: 50px;
+    height: 50px;
+    background-color: yellow;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    animation: twinkle 1s infinite alternate;
+}
+
+@keyframes twinkle {
+    from { transform: scale(1); }
+    to { transform: scale(1.1); }
+}
+
+.center-image {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.text, .title, .subtitle, .address, .buy-button {
+    color: white;
+    font-family: "Jaro", sans-serif;
+}
+
+.title { font-size: 38px; }
+.subtitle { font-size: 28px; }
+.address { font-size: 18px; margin-bottom: 20px; /* Spazio maggiore tra l'indirizzo e il pulsante di acquisto */ }
+
+.text-content div {
+    margin-bottom: 5px;
+}
+
+.buy-button {
     background-color: red;
     padding: 10px 20px;
     text-decoration: none;
     font-size: 18px;
     border-radius: 5px;
-    color: white;
-    z-index: 10;
+    position: absolute;
+    top: 90%; /* Aggiustato */
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 25px;
 }
 
 .social-buttons {
     position: absolute;
-    top: 92%;
+    top: 90%; /* Abbassato ulteriormente per evitare sovrapposizioni */
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     gap: 10px;
-    z-index: 10;
+    z-index: 20;
 }
 
 .social-button {
@@ -106,7 +146,7 @@ body, html {
     justify-content: center;
     align-items: center;
     padding: 10px;
-    text-decoration: none;
+    text-decoration:none;
     color: white;
     font-size: 24px;
     border-radius: 50%;
