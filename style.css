@@ -200,3 +200,41 @@ body, html {
 .telegram .fa-telegram-plane, .twitter .fa-twitter, .dexscreener .fa-chart-line {
     color: white;
 }
+
+.story-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px 20px;  /* Aggiusta il padding secondo necessità */
+    background: #fff;  /* Colore di sfondo, se necessario */
+}
+
+.story-content {
+    width: 50%;
+}
+
+.story-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;  /* Colore del titolo */
+    margin-bottom: 20px;
+}
+
+.story-text {
+    font-size: 1.2rem;
+    color: #666;  /* Colore del testo */
+    line-height: 1.5;
+}
+
+.story-gif {
+    width: 50%;
+    text-align: center;  /* Centra la GIF orizzontalmente */
+}
+
+.story-gif img {
+    width: 100%;  /* Adatta la dimensione dell'immagine se necessario */
+    max-width: 500px;  /* Massima larghezza della GIF */
+}
+
+.en { display: block; }
+.zh { display: block; font-size: 0.9rem; color: #555; } /* Stile per il testo cinese */
