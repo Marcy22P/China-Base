@@ -41,14 +41,9 @@ body, html {
     animation: waveMotion 6s ease-in-out infinite;
 }
 
-.wave { height: 50px; background: rgba(255, 0, 0, 0.6); opacity: 0.5; }
-.wave2 { height: 60px; background: rgba(255, 255, 0, 0.816); opacity: 0.4; bottom: 20px; }
-.wave3 { height: 70px; background: rgba(255, 204, 0, 0.3); opacity: 0.3; bottom: 40px; }
-.wave4 { height: 80px; background: rgba(255, 0, 0, 0.2); opacity: 0.2; bottom: 60px; }
-
 .text-content {
     position: absolute;
-    top: 60%;
+    top: 50%; /* Ridotto per diminuire la distanza dalla card */
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
@@ -77,47 +72,6 @@ body, html {
     z-index: 10;
 }
 
-@keyframes metalShine {
-    0%, 100% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-}
-
-.star-card {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    width: 50px;
-    height: 50px;
-    background-color: yellow;
-    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-    animation: twinkle 1s infinite alternate;
-}
-
-@keyframes twinkle {
-    from { transform: scale(1); }
-    to { transform: scale(1.1); }
-}
-
-.center-image {
-    width: 100%;
-    height: auto;
-    max-height: 100%;
-    object-fit: contain;
-}
-
-.text, .title, .subtitle, .address, .buy-button {
-    color: white;
-    font-family: "Jaro", sans-serif;
-}
-
-.title { font-size: 38px; }
-.subtitle { font-size: 28px; }
-.address { font-size: 18px; margin-bottom: 20px; /* Spazio maggiore tra l'indirizzo e il pulsante di acquisto */ }
-
-.text-content div {
-    margin-bottom: 5px;
-}
-
 .buy-button {
     background-color: red;
     padding: 10px 20px;
@@ -125,20 +79,20 @@ body, html {
     font-size: 18px;
     border-radius: 5px;
     position: absolute;
-    top: 90%; /* Aggiustato */
+    top: 75%; /* Aggiustato per essere sotto al testo */
     left: 50%;
     transform: translateX(-50%);
-    margin-top: 25px;
+    z-index: 10;
 }
 
 .social-buttons {
     position: absolute;
-    top: 90%; /* Abbassato ulteriormente per evitare sovrapposizioni */
+    top: 85%; /* Aggiustato per essere sotto al bottone "Buy" */
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     gap: 10px;
-    z-index: 20;
+    z-index: 15;
 }
 
 .social-button {
@@ -146,7 +100,7 @@ body, html {
     justify-content: center;
     align-items: center;
     padding: 10px;
-    text-decoration:none;
+    text-decoration: none;
     color: white;
     font-size: 24px;
     border-radius: 50%;
