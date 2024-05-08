@@ -121,17 +121,21 @@ body, html {
 
 .title, .subtitle, .address {
     font-weight: bold;
-    margin-top: 5px; /* Margini ridotti per compattezza */
+    margin-bottom: 10px; /* Aumentato il margine inferiore per separare meglio i testi */
+    font-size: 1.5rem; /* Adatta a seconda delle tue esigenze */
 }
+
+/* Adattamento per la versione cinese, che apparirà subito sotto alla versione inglese */
+.zh {
+    font-size: 1.2rem; /* Dimensione leggermente più piccola */
+    color: #ccc; /* Colore per distinguere, se desiderato */
+    margin-bottom: 20px; /* Distanza maggiore per separare dal contenuto seguente */
+}
+
 
 .title { font-size: 38px; }
 .subtitle { font-size: 28px; }
 .address { font-size: 18px; }
-
-.zh {
-    font-size: 0.8em; /* Dimensione ridotta per il cinese */
-    color: #ccc; /* Colore grigio chiaro per distinguere, opzionale */
-}
 
 .text-content div {
     margin-bottom: 5px; /* Distanza tra le righe */
@@ -144,19 +148,19 @@ body, html {
     font-size: 18px;
     border-radius: 5px;
     position: absolute;
-    top: 80%; /* Posizione regolata per distanziare dai bottoni social */
+    top: 75%; /* Posizione aggiustata per stare sotto il testo */
     left: 50%;
     transform: translateX(-50%);
-    margin-top: 30px;
+    margin-top: 20px; /* Spazio sufficiente per evitare sovrapposizioni */
 }
 
 .social-buttons {
     position: absolute;
-    top: 88%; /* Aumentato per evitare sovrapposizione con il bottone 'Buy' */
+    top: 85%; /* Posizione abbassata per garantire spazio adeguato */
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    gap: 15px;
+    gap: 10px; /* Spazio tra i bottoni */
     z-index: 20;
 }
 
