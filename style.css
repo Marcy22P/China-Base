@@ -133,6 +133,10 @@ body, html {
     color: #ccc; /* Colore grigio chiaro per distinguere, opzionale */
 }
 
+.text-content div {
+    margin-bottom: 5px; /* Distanza tra le righe */
+}
+
 .buy-button {
     background-color: red;
     padding: 10px 20px;
