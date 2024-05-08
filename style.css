@@ -128,6 +128,11 @@ body, html {
 .subtitle { font-size: 28px; }
 .address { font-size: 18px; }
 
+.zh {
+    font-size: 0.8em; /* Dimensione ridotta per il cinese */
+    color: #ccc; /* Colore grigio chiaro per distinguere, opzionale */
+}
+
 .buy-button {
     background-color: red;
     padding: 10px 20px;
